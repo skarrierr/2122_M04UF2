@@ -1,10 +1,8 @@
-
+import Button from '@mui/material/Button';
 function Submit ()
 {
 	return (
-		<button onClick={event=> {
-			 }
-		}>Añadir</button>
+		<Button variant="contained">Añadir</Button>
 	);
 
 

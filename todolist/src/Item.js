@@ -1,8 +1,9 @@
 import Remove from './Remove';
+import ListItem from '@mui/material/ListItem';
 function Item (props)
 {
 return (
-	<li>{props.task}<Remove /> </li>
+	<ListItem>{props.task} <Remove id_task={props.id_task} remove={props.remove}/></ListItem>
 );
 
 }

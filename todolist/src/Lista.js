@@ -1,5 +1,6 @@
 import React from 'react';
 import Item from './Item';
+import List from '@mui/material/List';
 class Lista extends React.Component
 {
 	constructor(props){
@@ -14,13 +15,14 @@ class Lista extends React.Component
 		let t = this.state.tasks;	
 		let tasks = [];
 		for (let i = 0; i < t.length; i++){
-			tasks.push(<Item task={t[i]} key={i}/>);
+			tasks.push(<Item task={t[i]} key={i} id_task={i}
+			remove={this.props.remove} />);
 		}
 
 		return (
-			<ul>
+			<List>
 				{tasks}	
-			</ul>
+			</List>
 		);
 	}
 }
